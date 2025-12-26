@@ -9,6 +9,14 @@ public class IntToBin {
     /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
     public static String toBinary(int x) {
         //// Replace the following statement with your code
-        return "";
+        if (x==1){
+            return "1";
+        }if(x==0){
+            return "0";
+        }
+
+        int rightestDigit=x%2;
+        String restOfNum=toBinary(x / 2);
+        return restOfNum + rightestDigit;
     }    
  }

@@ -8,6 +8,12 @@ public class Palindrome {
 	/** Checks if the given string is a palindrome. */
 	public static boolean isPalindrome(String s) {
 		//// Replace the followaing statement with your code
+		if(s.length()==1 || s.length()==0){
+			return true;
+		}else if(s.charAt(0)==s.charAt(s.length()-1)){
+			s=s.substring(1, s.length()-1);
+			return isPalindrome(s);
+		}
 		return false;
     }
 }
